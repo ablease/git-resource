@@ -44,6 +44,6 @@ fi
 
 {
   set -f
-  git rev-list --remotes -i --grep \\[finishes.*\\] --since 'Jan 14 2018'
+  git rev-list --remotes -i --grep \\[finishes.*\\] --since 'Jan 16 2018' --reverse
   set +f
 } | jq -R '.' | jq -s "map({ref: .})" >&3
